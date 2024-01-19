@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from "../actions"
+import { LOGIN, LOGOUT, ADD_TO_LIKED, REMOVE_FROM_LIKED } from "../actions"
 
 const initialState = {
     login: ''
@@ -16,6 +16,24 @@ const userReducer = (state = initialState, action) => {
                 ...state,
                 login: action.payload
             }
+        case ADD_TO_LIKED:
+            return {
+                ...state,
+                login: {
+                    ...state.login,
+                    likedSongs: [...state.login.likedSongs, action.payload],
+                },
+            };
+        case REMOVE_FROM_LIKED:
+            return {
+                ...state,
+                login: {
+                    ...state.login,
+                    likedSongs: state.login.likedSongs.filter(
+                        (song) => song !== action.payload
+                    ),
+                },
+            };
         default:
             return state
     }

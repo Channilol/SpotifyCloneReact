@@ -53,15 +53,16 @@ const LeftSidebar = () => {
                     <p>La tua libreria</p>
                 </div>
                 <div className='userPlaylists'>
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
-                    <SidebarCard />
+                    {whoIsLogged && whoIsLogged.likedSongs.length > 0 ? (
+                        whoIsLogged.likedSongs.map((song) => {
+                            return <SidebarCard data={song} />
+                        })
+                    ) : (
+                        <>
+                        <p>Non c'è niente</p>
+                        </>
+                    )}
+
                 </div>
             </div>
         </div>

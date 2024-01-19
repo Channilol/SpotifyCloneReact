@@ -8,11 +8,16 @@ const HomePage = () => {
     const navigate = useNavigate()
     const whoIsLogged = useSelector((state) => state.login.login)
 
+    useEffect(() => {
+        console.log(whoIsLogged)
+    },[whoIsLogged])
+
     return (
         <div className='homepage'>
             {whoIsLogged ? (
                 <>
                 <h2>Bentornato {whoIsLogged.email}</h2>
+                <p>Ora puoi mettere mi piace a qualsiasi canzone!</p>
                 </>
             ) : (
                 <>
