@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "37e1",
+      "username": "pippo",
+      "email": "pippo@gmail.com",
+      "password": "pippo",
+      "playlist": [],
+      "likedSongs": []
+    },
+    {
+      "id": "a2a0",
+      "username": "paperino",
+      "email": "paperino@gmail.com",
+      "password": "paperino",
+      "playlist": [],
+      "likedSongs": []
+    }
+  ]
+}

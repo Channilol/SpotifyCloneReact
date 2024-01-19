@@ -1,0 +1,45 @@
+.searchPage {
+    height: 100%;
+    animation: searchPage 0.3s ease-in-out forwards;
+}
+
+.searchPage > div:first-of-type {
+    text-align: center;
+}
+
+.searchPage > div > h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.searchPage > div > form > input {
+    width: 70%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background-color: rgba(255,255,255,0.05);
+    transition: background-color 0.1s ease-in-out;
+}
+
+@keyframes searchPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+.searchResultContainer {
+    height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

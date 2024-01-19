@@ -1,0 +1,30 @@
+.sidebarCard {
+    cursor: pointer;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 2px 0;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.sidebarCard:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.sidebarCard img {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.sidebarCard > div > h4 {
+    font-weight: 500;
+}
+
+.sidebarCard > div > p {
+    font-size: 0.8em;
+    opacity: 0.5;
+}

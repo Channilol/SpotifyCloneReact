@@ -1,0 +1,23 @@
+.homepage {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.homepageSongs {
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.homepage h2 {
+    font-size: 2em;
+    margin: 5px 0;
+}
+
+.homepage > h2:first-of-type {
+    margin: 20px 0 0 20px
+}
+
+.homepage > p:first-of-type {
+    margin: 0 0 30px 20px;
+}

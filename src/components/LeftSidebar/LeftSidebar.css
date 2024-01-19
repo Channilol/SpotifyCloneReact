@@ -1,0 +1,108 @@
+.leftSidebar {
+    width: 25%;
+    min-width: 250px;
+    height: calc(100vh - 100px);
+}
+
+/* TOP */
+
+.topLeftSidebar {
+    box-sizing: border-box;
+    padding: 5px 10px 5px 25px;
+    margin: 6px;
+    border-radius: 7px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #121212;
+}
+
+.topLeftSidebar > div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.topLeftSidebar > div:hover {
+    opacity: 1; 
+}
+
+.topLeftSidebar > div > img {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* MID */
+
+.midLeftSidebar {
+    box-sizing: border-box;
+    margin: 6px;
+    border-radius: 7px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #121212;
+}
+
+.midLeftSidebar button {
+    cursor: pointer;
+    width: 200px;
+    height: 55px;
+    background-color: rgba(255,255,255,0.05);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    animation: sidebarButtons 0.2s ease-in-out forwards;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes sidebarButtons {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.midLeftSidebar button:hover {
+    background-color: rgba(255,255,255,0.08);
+    opacity: 1;
+}
+
+/* BOTTOM */
+
+.botLeftSidebar {
+    box-sizing: border-box;
+    padding: 5px 0 15px 0;
+    margin: 6px;
+    border-radius: 7px;
+    height: calc(100% - 320px);
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+.botLeftSidebar > div:first-of-type {
+    display: flex;
+    margin: 15px 0;
+    padding: 0 25px;
+}
+
+.botLeftSidebar > div:first-of-type > img {
+    margin-right: 15px;
+}
+
+.userPlaylists {
+    padding: 0 10px;
+    overflow-y: scroll;
+}

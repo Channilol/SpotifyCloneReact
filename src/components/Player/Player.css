@@ -1,0 +1,32 @@
+.bottomPlayer {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    padding: 0 5px;
+    border-radius: 7px;
+    background-color: #121212;
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.bottomPlayer img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.bottomPlayer > div {
+    margin-left: 20px;
+}
+
+.bottomPlayer > div > h2 {
+    font-size: 2em;
+}
+
+.bottomPlayer > div > p {
+    font-size: 0.8em;
+}
