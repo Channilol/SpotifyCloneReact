@@ -55,7 +55,7 @@ const LeftSidebar = () => {
                 <div className='userPlaylists'>
                     {whoIsLogged && whoIsLogged.likedSongs.length > 0 ? (
                         whoIsLogged.likedSongs.map((song) => {
-                            return <SidebarCard data={song} />
+                            return <SidebarCard key={song.id} data={song} />
                         })
                     ) : (
                         <>

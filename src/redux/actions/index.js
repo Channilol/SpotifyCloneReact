@@ -43,22 +43,6 @@ export const postFetchAction = (url, dati) => {
     }
 }
 
-export const putFetchAction = (url, dati) => {
-    return async () => {
-        try {
-            const res = await fetch(url, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(dati)
-            })
-        } catch(err) {
-            console.log('Errore:', err)
-        }
-    }
-}
-
 export const setLoginAction = (user) => {
     return {
         type: LOGIN,

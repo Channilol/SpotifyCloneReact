@@ -5,10 +5,6 @@ import { UseSelector, useSelector } from 'react-redux'
 const Player = () => {
     const whatSongIsOn = useSelector((state) => state.playerSong.playerSong)
 
-    useEffect(() => {
-        console.log(whatSongIsOn)
-    },[whatSongIsOn])
-
     return (
         <div className='bottomPlayer'>
             {whatSongIsOn ? (

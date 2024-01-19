@@ -11,19 +11,36 @@ import { removeFromLikedAction } from '../../redux/actions'
 const SearchCard = ({data}) => {
     const [isLiked, setIsLiked] = useState(false)
 
+    const whoIsLogged = useSelector((state) => state.login.login)
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const apiUrl = 'http://localhost:3001/users'
-    const whoIsLogged = useSelector((state) => state.login.login)
+    const apiUrl = `http://localhost:3001/users/${whoIsLogged.id}`
+
+    const handleFetchPUT = async (url, song) => {
+        try {
+            const res = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(song)
+            })
+        } catch (err) {
+            console.log('Errore', err)
+        }
+    }
 
     const handleLikedSongs = () => {
         if (whoIsLogged) {
             if (whoIsLogged.likedSongs.includes(data)) {
                 setIsLiked(false)
                 dispatch(removeFromLikedAction(data))
+                handleFetchPUT(apiUrl, whoIsLogged)
             } else {
                 setIsLiked(true)
                 dispatch(addToLikedAction(data))
+                handleFetchPUT(apiUrl, whoIsLogged)
             }
         } else {
             alert('Non sei loggato')

@@ -27,10 +27,6 @@ const LoginPage = () => {
     },[])
 
     useEffect(() => {
-        console.log(userList)
-    }, [userList])
-
-    useEffect(() => {
         console.log('Ora è loggato', whoIsLogged)
     }, [whoIsLogged])
 
